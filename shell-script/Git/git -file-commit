@@ -1,0 +1,113 @@
+swayam@lin3:~/remote-github-repo/march-2025$ git branch -a
+* (HEAD detached at origin/swayam18-branch)
+  main
+  rebase
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/ankita-branch
+  remotes/origin/chinmay-branch1
+  remotes/origin/fahd-branch
+  remotes/origin/fayaz
+  remotes/origin/jayesh
+  remotes/origin/kashmira-branch1
+  remotes/origin/main
+  remotes/origin/omkarbranch
+  remotes/origin/pankaj-branch
+  remotes/origin/priyanka_branch
+  remotes/origin/raj-branch
+  remotes/origin/sachin-branch
+  remotes/origin/sanket-branch
+  remotes/origin/saurabh-branch
+  remotes/origin/shivani-branch
+  remotes/origin/sprint1
+  remotes/origin/sprint2
+  remotes/origin/swati
+  remotes/origin/swayam-branch
+  remotes/origin/swayam18-branch
+  remotes/origin/vrushali-branch
+swayam@lin3:~/remote-github-repo/march-2025$ git switch  remotes/origin/vrushali-branch
+fatal: a branch is expected, got remote branch 'origin/vrushali-branch'
+hint: If you want to detach HEAD at the commit, try again with the --detach option.
+swayam@lin3:~/remote-github-repo/march-2025$ git switch  remotes/origin/vrushali-branch --detach
+Previous HEAD position was b16eabb swayam18-file.txt 2nd commit
+HEAD is now at 42b0e8b vrushali.txt 1st commit
+swayam@lin3:~/remote-github-repo/march-2025$ git branch
+* (HEAD detached at origin/vrushali-branch)
+  main
+  rebase
+swayam@lin3:~/remote-github-repo/march-2025$ git log
+commit 42b0e8bf97195a83b6d0b7f8a79d7444ede213e9 (HEAD, origin/vrushali-branch)
+Author: Vrushali Dhondge <vrushaligaikwad96@gmail.com>
+Date:   Fri May 16 22:02:01 2025 +0000
+
+    vrushali.txt 1st commit
+
+commit 3ee88e794dcb07f7cdef3f3033eeb7f4e21311a9
+Merge: e648657 76fb107
+Author: kashieya <163264111+Kashieya4444@users.noreply.github.com>
+Date:   Sun May 11 12:01:12 2025 +0530
+
+    Merge pull request #10 from devopsdecode/kashmira-branch1
+
+    kashmira-file.txt first commit
+
+commit 76fb107ffde4fb47459ced42cd260c88f3a82d0c (origin/kashmira-branch1)
+Author: kashieya4444 <kieyastranger@gmail.com>
+Date:   Sun May 11 06:29:35 2025 +0000
+
+    kashmira-file.txt first commit
+
+commit e6486575b30ec355a716d4b4c441fb4e803ded7e
+Author: devopsdecode <devopsdecode@gmail.com>
+Date:   Sun May 11 10:05:52 2025 +0530
+
+    Initial commit
+swayam@lin3:~/remote-github-repo/march-2025$ ls
+kashmira-file.txt  README.md  vrushali.txt
+swayam@lin3:~/remote-github-repo/march-2025$ git rebase main
+Successfully rebased and updated detached HEAD.
+swayam@lin3:~/remote-github-repo/march-2025$ git log
+commit fc9860cc13bf771a18f16095bac9ab064a13f627 (HEAD)
+Author: Vrushali Dhondge <vrushaligaikwad96@gmail.com>
+Date:   Fri May 16 22:02:01 2025 +0000
+
+    vrushali.txt 1st commit
+
+commit 7cf7a6fbcb9bf1af7c5597212716bdfc3085cf5b (tag: 3-swayam, tag: 2-swayam, origin/main, origin/HEAD, main)
+Author: swayambhu chavan <swayamc687@gmail.com>
+Date:   Mon May 19 17:55:43 2025 +0530
+
+    sprint1 feature new tested on qa (#23)
+
+    feature sprint1
+
+commit 2a09dcf3d3b5bde65470dfab8386e4453f74c6a6
+Merge: 96af221 b16eabb
+Author: swayambhu chavan <swayamc687@gmail.com>
+Date:   Mon May 19 10:58:08 2025 +0530
+
+    Merge pull request #21 from devopsdecode/swayam18-branch
+
+    swayam18-file.txt 2nd commit
+
+commit b16eabbe74589dfc382e0c1b82f4fb7a5c6aea98 (origin/swayam18-branch, origin/sprint2)
+Author: swayam8080-lab <swayamc687@gmail.com>
+Date:   Mon May 19 05:15:06 2025 +0000
+
+    swayam18-file.txt 2nd commit
+
+commit 96af221ed6dc2abd92d5e88e1d77bbf4ae61851f
+Merge: 3c6f5d8 350e012
+Author: swayambhu chavan <swayamc687@gmail.com>
+Date:   Sun May 18 09:00:29 2025 +0530
+
+swayam@lin3:~/remote-github-repo/march-2025$ ls
+ankita-file.txt    raj-file.txt
+chinmay-file.txt   README.md
+fahd_new-file.txt  sachin-file1.txt
+fayaz.txt          saurabh_file.txt
+file1.txt          shivani.txt
+jayesh_file.txt    swayam18-file.txt
+kashmira-file.txt  swayam-file.txt
+pankaj-file.txt    vrushali.txt
+priya_file.txt
+swayam@lin3:~/remote-github-repo/march-2025$ vim swayam18-file.txt
